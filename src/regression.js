@@ -323,4 +323,4 @@ function createWrapper() {
   return Object.keys(methods).reduce(reduce, {});
 }
 
-module.exports = createWrapper();
+export default createWrapper();

@@ -1,17 +1,21 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['module'], factory);
+    define(['exports'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(module);
+    factory(exports);
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod);
+    factory(mod.exports);
     global.regression = mod.exports;
   }
-})(this, function (module) {
+})(this, function (exports) {
   'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
 
   function _defineProperty(obj, key, value) {
     if (key in obj) {
@@ -380,5 +384,5 @@
     return Object.keys(methods).reduce(reduce, {});
   }
 
-  module.exports = createWrapper();
+  exports.default = createWrapper();
 });

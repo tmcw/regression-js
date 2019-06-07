@@ -8,6 +8,7 @@
   "version": "2.0.1",
   "license": "MIT",
   "main": "./dist/regression.js",
+  "module": "./src/regression.js",
   "repository": "Tom-Alexander/regression-js",
   "keywords": [
     "regression",
